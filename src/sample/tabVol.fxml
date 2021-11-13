@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="base" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tabVol">
+    <children>
+        <AnchorPane prefHeight="500.0" prefWidth="286.0" style="-fx-background-color: #6600CC;">
+            <children>
+                <Button layoutX="8.0" layoutY="454.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #6600CC;" text="&lt;&lt;" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="19.0" layoutY="426.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="25.0" prefWidth="246.0" style="-fx-background-color: #FFFFFF;" text="Ajouter" textFill="#6600cc">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font></Button>
+                <TextField fx:id="numdevol" layoutX="109.0" layoutY="85.0" />
+                <TextField fx:id="dateddeepart" layoutX="109.0" layoutY="127.0" />
+                <Label fx:id="numvol" layoutX="15.0" layoutY="89.0" text="N° vol :" textFill="#fcf8f8">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="datedepart" layoutX="9.0" layoutY="131.0" text="Date depart :" textFill="#fcf8f8">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="9.0" layoutY="14.0" prefHeight="46.0" prefWidth="265.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
+                    <children>
+                        <TextField fx:id="chercher" layoutX="42.0" layoutY="11.0" prefHeight="25.0" prefWidth="203.0" promptText="recherche" style="-fx-background-color: #9999FF;" />
+                        <Button layoutX="8.0" layoutY="11.0" mnemonicParsing="false" onAction="#chercher" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #FFFFFF;">
+                            <graphic>
+                                <ImageView fx:id="recherche" fitHeight="19.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../image/rech.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children>
+                </AnchorPane>
+                <Label fx:id="datearrivee" layoutX="7.0" layoutY="174.0" text="Date arrivée :" textFill="#fcf8f8">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="heuredepart" layoutX="6.0" layoutY="214.0" text="Heure depart:" textFill="#fcf8f8">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="datearr" layoutX="109.0" layoutY="170.0" />
+                <TextField fx:id="hdep" layoutX="109.0" layoutY="210.0" />
+            <TextField fx:id="heurearr" layoutX="109.0" layoutY="256.0" />
+            <TextField fx:id="pilote" layoutX="109.0" layoutY="293.0" />
+            <TextField fx:id="codevd" layoutX="109.0" layoutY="330.0" />
+            <TextField fx:id="codeva" layoutX="109.0" layoutY="365.0" />
+            <Label fx:id="heurearrivee" layoutX="6.0" layoutY="260.0" prefHeight="18.0" prefWidth="105.0" text="Heure arrivée : " textFill="#fcf8f8">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="matricule" layoutX="15.0" layoutY="297.0" text="M.Pilote:" textFill="#fcf8f8">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="cvd" layoutX="23.0" layoutY="334.0" text="C.V.D :" textFill="#fcf8f8">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="cva" layoutX="21.0" layoutY="369.0" text="C.V.A :" textFill="#fcf8f8">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <Button layoutX="663.0" layoutY="7.0" mnemonicParsing="false" onAction="#quitter" prefHeight="22.0" prefWidth="24.0" style="-fx-background-color: #FFFFFF;" text="X" textFill="#6600cc">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <ImageView fx:id="icon" fitHeight="38.0" fitWidth="41.0" layoutX="544.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../image/icon-avion (1).png" />
+            </image>
+        </ImageView>
+        <Label fx:id="liste" layoutX="392.0" layoutY="24.0" prefHeight="29.0" prefWidth="180.0" text="Liste des Vols " textFill="#6600cc">
+            <font>
+                <Font name="Times New Roman Bold" size="25.0" />
+            </font>
+        </Label>
+        <TableView fx:id="table" layoutX="297.0" layoutY="99.0" prefHeight="261.0" prefWidth="385.0">
+            <columns>
+                <TableColumn fx:id="num" prefWidth="29.0" text="N°" />
+                <TableColumn fx:id="dd" prefWidth="56.0" text="D.D" />
+                <TableColumn fx:id="da" prefWidth="59.0" text="D.A" />
+                <TableColumn fx:id="hd" prefWidth="41.0" text="H.D" />
+            <TableColumn fx:id="ha" prefWidth="40.0" text="H.A" />
+            <TableColumn fx:id="pilo" prefWidth="57.0" text="Pilote" />
+            <TableColumn fx:id="cvilled" prefWidth="51.0" text="C.V.D" />
+            <TableColumn fx:id="cvillea" prefWidth="51.0" text="C.V.A" />
+            </columns>
+        </TableView>
+          <Button layoutX="297.0" layoutY="413.0" mnemonicParsing="false" onAction="#suprimer" prefHeight="28.0" prefWidth="180.0" style="-fx-background-color: #6600CC;" text="Suprimer " textFill="WHITE">
+              <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+              </font>
+      </Button>
+          <Button layoutX="511.0" layoutY="413.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="28.0" prefWidth="180.0" style="-fx-background-color: #6600CC;" text="Modifier" textFill="WHITE">
+              <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+              </font>
+      </Button>
+    </children>
+</AnchorPane>

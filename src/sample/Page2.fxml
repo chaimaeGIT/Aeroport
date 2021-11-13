@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Page2">
+   <children>
+      <Button layoutX="656.0" layoutY="14.0" mnemonicParsing="false" onAction="#quitter" prefHeight="27.0" prefWidth="30.0" style="-fx-background-color: #FFFFFF;" text="X" textFill="#6600cc">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="logo" fitHeight="72.0" fitWidth="91.0" layoutX="477.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/e-commerce-43-512.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="spacetrip" layoutX="473.0" layoutY="202.0" prefHeight="43.0" prefWidth="88.0" text="Space Trip" textFill="#6600cc">
+         <font>
+            <Font name="Segoe Print Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FFFFFF;" text="&lt;&lt;" textFill="#6600cc">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font></Button>
+      <Label fx:id="espaceadm1" layoutX="238.0" layoutY="24.0" prefHeight="34.0" prefWidth="251.0" text="Espace Administrateur " textAlignment="CENTER" textFill="#6600cc">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="icon" fitHeight="42.0" fitWidth="46.0" layoutX="477.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/icon-avion (1).png" />
+         </image>
+      </ImageView>
+      <Button layoutX="52.0" layoutY="89.0" mnemonicParsing="false" onAction="#ville" prefHeight="55.0" prefWidth="251.0" style="-fx-background-color: #6600CC;" text="Viles" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="sendpaper5" fitHeight="24.0" fitWidth="33.0" layoutX="76.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/send_paper_plane-512.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="52.0" layoutY="160.0" mnemonicParsing="false" onAction="#pilotes" prefHeight="55.0" prefWidth="251.0" style="-fx-background-color: #6600CC;" text="Pilotes" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="sendpaper4" fitHeight="24.0" fitWidth="33.0" layoutX="76.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/send_paper_plane-512.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="52.0" layoutY="230.0" mnemonicParsing="false" onAction="#reservations" prefHeight="55.0" prefWidth="251.0" style="-fx-background-color: #6600CC;" text="Reservations" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="sendpaper3" fitHeight="24.0" fitWidth="33.0" layoutX="76.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/send_paper_plane-512.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="52.0" layoutY="298.0" mnemonicParsing="false" onAction="#vol" prefHeight="55.0" prefWidth="251.0" style="-fx-background-color: #6600CC;" text="Vols" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="sendpaper2" fitHeight="24.0" fitWidth="33.0" layoutX="76.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/send_paper_plane-512.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="52.0" layoutY="359.0" mnemonicParsing="false" onAction="#client" prefHeight="55.0" prefWidth="251.0" style="-fx-background-color: #6600CC;" text="Clients" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="sendpaper1" fitHeight="24.0" fitWidth="33.0" layoutX="76.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/send_paper_plane-512.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

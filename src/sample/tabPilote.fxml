@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="base" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tabPilote">
+    <children>
+        <AnchorPane prefHeight="500.0" prefWidth="286.0" style="-fx-background-color: #6600CC;">
+            <children>
+                <Button layoutX="8.0" layoutY="454.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #6600CC;" text="&lt;&lt;" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="16.0" layoutY="381.0" mnemonicParsing="false" onAction="#Modifier" prefHeight="25.0" prefWidth="246.0" style="-fx-background-color: #FFFFFF;" text="Modifier" textFill="#6600cc">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font></Button>
+                <Button layoutX="15.0" layoutY="342.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="25.0" prefWidth="246.0" style="-fx-background-color: #FFFFFF;" text="Ajouter" textFill="#6600cc">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font></Button>
+                <Button layoutX="18.0" layoutY="418.0" mnemonicParsing="false" onAction="#suprimer" prefHeight="25.0" prefWidth="246.0" style="-fx-background-color: #FFFFFF;" text="Suprimer " textFill="#6600cc">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font></Button>
+                <TextField fx:id="matricule" layoutX="109.0" layoutY="135.0" />
+                <TextField fx:id="nomP" layoutX="109.0" layoutY="178.0" />
+                <Label fx:id="matriculeL" layoutX="15.0" layoutY="139.0" text="Matricule :" textFill="#fcf8f8">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="nomL" layoutX="22.0" layoutY="182.0" text="Nom :" textFill="#fcf8f8">
+                    <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                    </font>
+                </Label>
+                <AnchorPane layoutX="7.0" layoutY="51.0" prefHeight="46.0" prefWidth="265.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30;">
+                    <children>
+                        <TextField fx:id="chercher" layoutX="42.0" layoutY="11.0" prefHeight="25.0" prefWidth="203.0" promptText="recherche" style="-fx-background-color: #9999FF;" />
+                        <Button layoutX="8.0" layoutY="11.0" mnemonicParsing="false" onAction="#chercher" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: #FFFFFF;">
+                            <graphic>
+                                <ImageView fx:id="recherche" fitHeight="19.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../image/rech.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                    </children>
+                </AnchorPane>
+            <Label fx:id="prenoml" layoutX="21.0" layoutY="222.0" text="Prénom :" textFill="#fcf8f8">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="adressl" layoutX="23.0" layoutY="268.0" text="Adress :" textFill="#fcf8f8">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="prenom" layoutX="109.0" layoutY="218.0" />
+            <TextField fx:id="adress" layoutX="109.0" layoutY="264.0" />
+            </children>
+        </AnchorPane>
+        <Button layoutX="663.0" layoutY="7.0" mnemonicParsing="false" onAction="#quitter" prefHeight="22.0" prefWidth="24.0" style="-fx-background-color: #FFFFFF;" text="X" textFill="#6600cc">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Button>
+        <ImageView fx:id="icon" fitHeight="38.0" fitWidth="41.0" layoutX="544.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../image/icon-avion (1).png" />
+            </image>
+        </ImageView>
+        <Label fx:id="liste" layoutX="362.0" layoutY="22.0" prefHeight="29.0" prefWidth="180.0" text="Liste des Pilotes " textFill="#6600cc">
+            <font>
+                <Font name="Times New Roman Bold" size="25.0" />
+            </font>
+        </Label>
+        <TableView fx:id="table" layoutX="297.0" layoutY="99.0" prefHeight="353.0" prefWidth="385.0">
+            <columns>
+                <TableColumn fx:id="matri" prefWidth="63.0" text="Matricule" />
+                <TableColumn fx:id="name" prefWidth="86.0" text="Nom" />
+            <TableColumn fx:id="firstname" prefWidth="99.0" text="Prénom" />
+            <TableColumn fx:id="adressp" prefWidth="136.0" text="Adress" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

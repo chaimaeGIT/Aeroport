@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="base" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.USER">
+   <children>
+      <ImageView fx:id="background" fitHeight="566.0" fitWidth="889.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="27.0" layoutY="46.0" opacity="0.29" prefHeight="178.0" prefWidth="370.0" style="-fx-background-color: #6600CC;" />
+      <Label fx:id="l1" layoutX="43.0" layoutY="59.0" text="CIN:" textFill="#140202">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="l2" layoutX="42.0" layoutY="128.0" text="Numéro de vol :">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="l3" layoutX="221.0" layoutY="59.0" text="Date réservation :">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cin" layoutX="42.0" layoutY="88.0" prefHeight="25.0" prefWidth="142.0" />
+      <TextField fx:id="numerovol" layoutX="42.0" layoutY="159.0" prefHeight="25.0" prefWidth="142.0" />
+      <TextField fx:id="date" layoutX="221.0" layoutY="88.0" prefHeight="25.0" prefWidth="142.0" />
+      <Button layoutX="243.0" layoutY="159.0" mnemonicParsing="false" onAction="#reserver" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #6600CC;" text="Réserver " textFill="WHITE">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="666.0" layoutY="6.0" mnemonicParsing="false" onAction="#quitter" opacity="0.3" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: #FFFFFF;" text="X" textFill="#6600cc">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="27.0" layoutY="454.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #FFFFFF;" text="&lt;&lt;" textFill="#6600cc">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" layoutX="27.0" layoutY="243.0" onMouseClicked="#chercher" prefHeight="200.0" prefWidth="650.0">
+        <columns>
+          <TableColumn fx:id="num" prefWidth="41.0" text="N° vol" />
+          <TableColumn fx:id="dd" prefWidth="76.0" text="Date depart " />
+            <TableColumn fx:id="da" prefWidth="93.0" text="Date arrivée" />
+            <TableColumn fx:id="hd" prefWidth="90.0" text="Heure départ" />
+            <TableColumn fx:id="ha" prefWidth="85.0" text="Heure arrivée " />
+            <TableColumn fx:id="mp" prefWidth="103.0" text="Matricule Pilote " />
+            <TableColumn fx:id="vd" prefWidth="81.0" text=" Ville  depart " />
+            <TableColumn fx:id="va" text="Ville Arrivée " />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="417.0" layoutY="151.0" opacity="0.22" prefHeight="41.0" prefWidth="243.0" style="-fx-background-color: #6600CC; -fx-background-radius: 30;" />
+      <TextField fx:id="recherche" layoutX="486.0" layoutY="160.0" />
+      <Button layoutX="445.0" layoutY="157.0" mnemonicParsing="false" onAction="#chercher" prefHeight="25.0" prefWidth="33.0" style="-fx-background-color: #FFFFFF;">
+         <graphic>
+            <ImageView fx:id="cher" fitHeight="25.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/rech.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
